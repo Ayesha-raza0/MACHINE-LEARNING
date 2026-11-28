@@ -1,0 +1,29 @@
+
+**About Logistic Regression**
+
+Logistic regression is a supervised machine learning algorithm used for binary classification.
+ Instead of predicting a continuous value like linear regression, 
+it predicts the probability that an input belongs to a particular class.
+
+### How it works
+1. The model calculates a linear combination of the input: `z = b0 + b1 * age`
+2. The sigmoid function converts z into a probability between 0 and 1: `P = 1 / (1 + e^(-z))`
+3. If the probability is 0.5 or higher, the model predicts class 1 (buys insurance); otherwise, class 0 (does not buy)
+
+ ### Training
+The model learns its coefficients by minimizing the log loss (binary cross-entropy) function, which penalizes confident incorrect predictions.
+
+### Evaluation Metrics
+- **Accuracy:** overall proportion of correct predictions
+- **Confusion Matrix:** breakdown of true/false positives and negatives
+- **Precision:** how many predicted buyers actually bought insurance
+- **Recall:** how many actual buyers were correctly identified
+- **F1-Score:** harmonic mean of precision and recall
+
+### Interpretation
+The coefficient for age shows how the log-odds of buying life insurance change with each additional year of age. 
+A positive coefficient means older people are more likely to buy.
+
+### Limitations
+This model uses only age as a feature, so it is a simplified view of a real-world problem. Adding features such as income, 
+marital status, or number of dependents could improve its predictions.
